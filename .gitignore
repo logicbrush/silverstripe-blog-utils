@@ -1,0 +1,8 @@
+.phpunit.result.cache
+*~
+app
+composer.lock
+coverage.xml
+public
+resources
+vendor

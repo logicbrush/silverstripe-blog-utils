@@ -1,0 +1,47 @@
+{
+	"name": "logicbrush/silverstripe-TBD",
+	"description": "TBD",
+	"homepage": "https://www.logicbrush.com/specialities/silverstripe-development/",
+	"type": "silverstripe-vendormodule",
+	"keywords": [
+		"silverstripe",
+		"TBD"
+	],
+	"license": "BSD-3-Clause",
+	"authors": [{
+		"name": "John Learn",
+		"email": "jflearn@logicbrush.com"
+	}],
+	"require": {
+		"php": "^7.4||^8.0",
+		"silverstripe/framework": "^4.0||^5.0"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^8.0||^9.5",
+		"silverstripe/sqlite3": "*",
+		"logicbrush/metrics": "*",
+		"cmrcx/phptidy": "*",
+		"rector/rector": "^1.2"
+	},
+	"autoload": {
+		"psr-4": {
+			"Logicbrush\\TBD\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Logicbrush\\TBD\\Tests\\": "tests/"
+		}
+	},
+	"extra": {
+		"expose": [
+			"client/dist"
+		]
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true,
+			"silverstripe/vendor-plugin": true
+		}
+	}
+}
