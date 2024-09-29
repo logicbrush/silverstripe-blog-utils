@@ -1,11 +1,11 @@
-# silverstripe-TBD
+# silverstripe-blog-utils
 
 TBD
 
 ## Installation
 
 ```sh
-composer require "logicbrush/silverstripe-TBD"
+composer require "logicbrush/silverstripe-blog-utils"
 ```
 
 ## General Usage
