@@ -37,6 +37,8 @@ class BlogPostExpirationTest extends FunctionalTest {
 		$post->write();
 		$post->publishSingle();
 
+		var_dump(BlogPost::get());
+
 		// Only one should exist.
 		$this->assertEquals(1, BlogPost::get()->count());
 
