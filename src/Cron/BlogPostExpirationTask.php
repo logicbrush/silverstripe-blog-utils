@@ -30,7 +30,7 @@ class BlogPostExpirationTask implements CronTask {
 		$posts = BlogPost::get()->filter( [
 				'ExpirationDate:LessThan' => $now,
 			] );
-		foreach ($posts as $post ) {
+		foreach ( $posts as $post ) {
 			error_log( " - Archiving Post {$post->ID}." );
 			$post->doArchive();
 		}
