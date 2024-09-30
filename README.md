@@ -19,4 +19,5 @@ To execute the cron task, you must create a cron job that calls `dev/cron` as
 
 ## Blog Post Expiration
 
-A new date time field
+A new date time field `Expired Date` has been added to the `Post Options` tab.
+Enter this value to have the post automatically archived at the specified time.
