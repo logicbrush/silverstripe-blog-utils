@@ -14,13 +14,17 @@ class BlogPostExpirationTask implements CronTask {
 	}
 
 	public function process() {
+		error_log("Running " . self::class . ".");
 		$now = DBDatetime::now();
 		$posts = BlogPost::get()->filter([
 			'ExpirationDate:LessThan' => $now,
 		]);
 		foreach ($posts as $post) {
+			error_log(" - Archiving Post {$post->ID}.");
 			$post->doArchive();
 		}
+		error_log("Done.");
+		
 	}
 	
 }
