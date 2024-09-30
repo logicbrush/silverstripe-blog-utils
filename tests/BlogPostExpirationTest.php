@@ -11,7 +11,7 @@ class BlogPostExpirationTest extends FunctionalTest {
 
 	public function setUp() : void {
 		parent::setUp();
-		$this->cron = BlogPostExpirationTask::create();
+		$this->cron = new BlogPostExpirationTask();
 	}
 
 	public function testArchivingOfExpiredBlogPosts() {
