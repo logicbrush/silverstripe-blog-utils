@@ -35,7 +35,7 @@ class BlogPostExpirationTest extends FunctionalTest {
 			'ExpirationDate' => '2001-01-01', // expired.
 		]);
 		var_dump($post->write());
-		$post->publishSingle();
+		var_dump($post->publishSingle());
 
 		// Only one should exist.
 		$this->assertEquals(1, BlogPost::get()->count());
