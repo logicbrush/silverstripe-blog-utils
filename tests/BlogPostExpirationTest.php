@@ -4,6 +4,7 @@ namespace Logicbrush\BlogUtils\Tests;
 
 use SilverStripe\Dev\FunctionalTest;
 use Logicbrush\BlogUtils\Cron\BlogPostExpirationTask;
+use SilverStripe\Blog\Model\BlogPost;
 
 class BlogPostExpirationTest extends FunctionalTest {
 
