@@ -22,7 +22,7 @@ class BlogPostExpirationTest extends FunctionalTest {
 			'Title' => 'Test Blog',
 		]);
 		$this->blog->write();
-		$this->blog->publishSingle();
+		$this->blog->publishRecursive();
 
 	}
 
@@ -35,7 +35,7 @@ class BlogPostExpirationTest extends FunctionalTest {
 			'ExpirationDate' => '2001-01-01', // expired.
 		]);
 		var_dump($post->write());
-		var_dump($post->publishSingle());
+		var_dump($post->publishRecursive());
 
 		// Only one should exist.
 		$this->assertEquals(1, BlogPost::get()->count());
