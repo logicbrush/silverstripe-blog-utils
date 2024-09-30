@@ -1,11 +1,11 @@
 {
 	"name": "logicbrush/silverstripe-blog-utils",
-	"description": "TBD",
+	"description": "A collection of enhancements & utilities for the Silverstripe Blog module.",
 	"homepage": "https://www.logicbrush.com/specialities/silverstripe-development/",
 	"type": "silverstripe-vendormodule",
 	"keywords": [
 		"silverstripe",
-		"TBD"
+		"blog"
 	],
 	"license": "BSD-3-Clause",
 	"authors": [{
@@ -14,7 +14,7 @@
 	}],
 	"require": {
 		"php": "^7.4||^8.0",
-		"silverstripe/framework": "^4.0||^5.0",
+		"silverstripe/cms": "^4.0||^5.0",
 		"silverstripe/blog": "*",
 		"silverstripe/crontask": "*"
 	},
