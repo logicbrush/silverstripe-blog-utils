@@ -41,11 +41,11 @@ class BlogPostExpirationTest extends FunctionalTest {
 		// Only one should exist.
 		$this->assertEquals(1, BlogPost::get()->count());
 
-		// // Run the cron task.
-		// $this->cron->process();
+		// Run the cron task.
+		$this->cron->process();
 
-		// // Now none should exist.
-		// $this->assertEquals(0, BlogPost::get()->count());
+		// Now none should exist.
+		$this->assertEquals(0, BlogPost::get()->count());
 
 	}
 
