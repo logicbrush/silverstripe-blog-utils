@@ -25,6 +25,7 @@ class BlogPostExpirationExtension extends DataExtension {
 
 	/**
 	 *
+	 * @Metrics( crap = 2, uncovered = true )
 	 */
 	public function updateCMSFields( FieldList $fields ) {
 		$expirationDate = DatetimeField::create( 'ExpirationDate', 'Expiration Date' );

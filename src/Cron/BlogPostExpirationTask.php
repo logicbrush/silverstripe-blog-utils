@@ -11,6 +11,7 @@ class BlogPostExpirationTask implements CronTask {
 
 	/**
 	 *
+	 * @Metrics( crap = 2, uncovered = true )
 	 */
 
 
@@ -21,6 +22,7 @@ class BlogPostExpirationTask implements CronTask {
 
 	/**
 	 *
+	 * @Metrics( crap = 2 )
 	 */
 	public function process() {
 		error_log( "Running " . self::class . "." );
