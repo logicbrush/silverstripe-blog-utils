@@ -40,7 +40,7 @@ jobs:
           ./vendor/bin/rector process src
       - name: Tidy Source Code
         run: |
-          find tests -name "*.php" | xargs -n 1 ./vendor/bin/phptidy.php replace && \
+          find tests -name "*.php" | xargs -n 1 ./vendor/bin/phptidy.php replace
           find src -name "*.php" | xargs -n 1 ./vendor/bin/phptidy.php replace
       - name: Push Back Changes
         run: |
