@@ -32,11 +32,11 @@ class BlogPostExpirationTest extends FunctionalTest {
 		$post = BlogPost::create([
 			'Title' => 'Test Post #1',
 			'ParentID' => $this->blog->ID,
-			'PublishDate' => '2001-01-01',
+			'PublishDate' => '2001-01-01', // published.
 			'ExpirationDate' => '2001-01-01', // expired.
 		]);
-		var_dump($post->write());
-		var_dump($post->publishRecursive());
+		$post->write();
+		$post->publishRecursive();
 
 		// Only one should exist.
 		$this->assertEquals(1, BlogPost::get()->count());
