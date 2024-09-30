@@ -28,6 +28,7 @@ class BlogPostExpirationTest extends FunctionalTest {
 
 	public function testArchivingOfExpiredBlogPosts() {
 		
+		// Create and publish the blog post.
 		$post = BlogPost::create([
 			'Title' => 'Test Post #1',
 			'ParentID' => $this->blog->ID,
@@ -35,9 +36,15 @@ class BlogPostExpirationTest extends FunctionalTest {
 		]);
 		$post->write();
 		$post->publishSingle();
+
+		// Only one should exist.
+		$this->assertEquals(1, BlogPost::get()->count());
+
+		// Run the cron task.
 		$this->cron->process();
 
-		$post->refresh();
+		// Now none should exist.
+		$this->assertEquals(0, BlogPost::get()->count());
 
 	}
 
