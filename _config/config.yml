@@ -1,0 +1,9 @@
+---
+Name: blog-utils
+After:
+  - '#blogconfig'
+---
+
+SilverStripe\Blog\Model\BlogPost:
+  extensions:
+    - Logicbrush\BlogUtils\Extensions\BlogPostExpirationExtension

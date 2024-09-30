@@ -1,8 +1,11 @@
+.phptidy-cache
 .phpunit.result.cache
+*.log
 *~
 app
 composer.lock
 coverage.xml
-public
+DOCKER_ENV
+docker_tag
 resources
 vendor
