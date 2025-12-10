@@ -13,16 +13,16 @@
 		"email": "jflearn@logicbrush.com"
 	}],
 	"require": {
-		"php": "^7.4||^8.0",
-		"silverstripe/blog": "^4.0||^5.0",
-		"silverstripe/cms": "^4.0||^5.0||^6.0",
+		"silverstripe/cms": "^6.0||6.x-dev",
+		"silverstripe/blog": "^5.0||5.x-dev",
 		"silverstripe/crontask": "^4.0||4.x-dev"
 	},
 	"require-dev": {
-		"cmrcx/phptidy": "*",
+		"silverstripe/sqlite3": "dev-master",
+		"phpunit/phpunit": "^11.0",
+		"rector/rector": "^1.2",
 		"logicbrush/metrics": "^1.0",
-		"phpunit/phpunit": "^8.0||^9.5||^11.0",
-		"rector/rector": "^1.2"
+		"cmrcx/phptidy": "*"
 	},
 	"autoload": {
 		"psr-4": {
@@ -43,7 +43,6 @@
 		"allow-plugins": {
 			"composer/installers": true,
 			"silverstripe/vendor-plugin": true
-		},
-		"sort-packages": true
+		}
 	}
 }
