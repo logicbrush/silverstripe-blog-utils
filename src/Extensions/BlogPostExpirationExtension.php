@@ -13,6 +13,8 @@ use SilverStripe\Core\Extension;
  * @property ?string $ExpirationDate
  * @extends Extension<(BlogPost & static)>
  */
+
+
 class BlogPostExpirationExtension extends Extension {
 
 	private static $db = [

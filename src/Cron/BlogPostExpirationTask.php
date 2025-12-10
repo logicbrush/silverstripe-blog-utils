@@ -17,25 +17,33 @@ class BlogPostExpirationTask implements CronTask {
 
 
 	#[Override]
- public function getSchedule() {
-		return "*/2 * * * *";
-	}
+
+/**
+ *
+ */
+public function getSchedule() {
+	return "*/2 * * * *";
+}
 
 
-	/**
-	 *
-	 * @Metrics( crap = 2 )
-	 */
-	#[Override]
- public function process() {
-		$now = DBDatetime::now();
-		$posts = BlogPost::get()->filter( [
-				'ExpirationDate:LessThan' => $now,
-			] );
-		foreach ( $posts as $post ) {
-			$post->doArchive();
-		}
-	}
+/**
+ *
+ * @Metrics( crap = 2 )
+ */
+#[Override]
+
+/**
+ *
+ */
+public function process() {
+$now = DBDatetime::now();
+$posts = BlogPost::get()->filter( [
+		'ExpirationDate:LessThan' => $now,
+	] );
+foreach ( $posts as $post ) {
+	$post->doArchive();
+}
+}
 
 
 }
