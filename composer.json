@@ -20,7 +20,6 @@
 	},
 	"require-dev": {
 		"phpunit/phpunit": "^8.0||^9.5",
-		"silverstripe/sqlite3": "*",
 		"logicbrush/metrics": "*",
 		"cmrcx/phptidy": "*",
 		"rector/rector": "^1.2"
