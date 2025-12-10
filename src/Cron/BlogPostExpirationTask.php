@@ -20,6 +20,7 @@ class BlogPostExpirationTask implements CronTask {
 
 /**
  *
+ * @Metrics( crap = 2, uncovered = true )
  */
 public function getSchedule() {
 	return "*/2 * * * *";
@@ -34,6 +35,7 @@ public function getSchedule() {
 
 /**
  *
+ * @Metrics( crap = 2 )
  */
 public function process() {
 $now = DBDatetime::now();
