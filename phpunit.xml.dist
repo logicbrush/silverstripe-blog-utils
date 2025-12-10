@@ -19,8 +19,9 @@
     <php>
         <includePath>app/code</includePath>
         <env name="SS_DATABASE_CLASS" value="MySQLDatabase"/>
-        <env name="SS_DATABASE_USERNAME" value="testing"/>
-        <env name="SS_DATABASE_PASSWORD" value="testing"/>
+        <env name="SS_DATABASE_NAME" value="testing"/>
+        <env name="SS_DATABASE_USERNAME" value="root"/>
+        <env name="SS_DATABASE_PASSWORD" value="root"/>
     </php>
 
 </phpunit>
