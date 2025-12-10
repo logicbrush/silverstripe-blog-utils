@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/9.3/phpunit.xsd" bootstrap="vendor/silverstripe/cms/tests/bootstrap.php" executionOrder="depends,defects" forceCoversAnnotation="false" beStrictAboutCoversAnnotation="true" beStrictAboutOutputDuringTests="true" beStrictAboutTodoAnnotatedTests="true" failOnRisky="true" failOnWarning="true" verbose="true">
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="vendor/silverstripe/cms/tests/bootstrap.php"
+         cacheDirectory=".phpunit.cache"
+         executionOrder="depends,defects"
+         shortenArraysForExportThreshold="10"
+         requireCoverageMetadata="true"
+         beStrictAboutCoverageMetadata="true"
+         beStrictAboutOutputDuringTests="true"
+         displayDetailsOnPhpunitDeprecations="true"
+         failOnPhpunitDeprecation="true"
+         failOnRisky="true"
+         failOnWarning="true">
 
     <testsuites>
         <testsuite name="default">
@@ -7,20 +19,17 @@
         </testsuite>
     </testsuites>
 
-    <coverage processUncoveredFiles="true">
+    <source ignoreIndirectDeprecations="true" restrictNotices="true" restrictWarnings="true">
         <include>
-            <directory suffix=".php">src</directory>
+            <directory>src</directory>
         </include>
-        <exclude>
-            <file>src/bootstrap.php</file>
-        </exclude>
-    </coverage>
+    </source>
 
     <php>
         <includePath>app/code</includePath>
         <env name="SS_DATABASE_CLASS" value="MySQLDatabase"/>
         <env name="SS_DATABASE_SERVER" value="127.0.0.1"/>
-        <env name="SS_DATABASE_NAME" value="testing"/>
+        <env name="SS_DATABASE_NAME" value="silverstripe-blog-utils"/>
         <env name="SS_DATABASE_USERNAME" value="root"/>
         <env name="SS_DATABASE_PASSWORD" value="root"/>
     </php>
