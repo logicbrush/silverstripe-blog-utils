@@ -10,6 +10,9 @@ use SilverStripe\Blog\Model\Blog;
 class BlogPostExpirationTest extends FunctionalTest {
 
 	protected $usesDatabase = true;
+	
+	private BlogPostExpirationTask $cron = null;
+	private Blog $blog = null;
 
 	/**
 	 *
