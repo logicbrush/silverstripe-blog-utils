@@ -5,7 +5,7 @@ namespace Logicbrush\BlogUtils\Extensions;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Blog\Model\BlogPost;
 use SilverStripe\Forms\DatetimeField;
-use SilverStripe\Core\DataExtension;
+use SilverStripe\Core\Extension;
 
 /**
  *
@@ -13,7 +13,7 @@ use SilverStripe\Core\DataExtension;
  */
 
 
-class BlogPostExpirationExtension extends DataExtension {
+class BlogPostExpirationExtension extends Extension {
 
 	private static $db = [
 		'ExpirationDate' => 'Datetime',
