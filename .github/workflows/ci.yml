@@ -78,7 +78,7 @@ jobs:
     services:
       mysql: *mysql
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - uses: php-actions/composer@v6
         with:
           command: update
@@ -94,7 +94,7 @@ jobs:
     needs: [latest,matrix]
     runs-on: 'ubuntu-latest'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v5
       - run: |
           false || ( \
             git config user.name github-actions && \
