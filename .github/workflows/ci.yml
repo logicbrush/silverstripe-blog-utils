@@ -20,7 +20,7 @@ jobs:
     name: "Build & Verify"
     runs-on: 'ubuntu-latest'
     services:
-      mysql:
+      mysql: &mysql
         image: mysql:8.0
         env:
           MYSQL_DATABASE: silverstripe-blog-utils
@@ -68,16 +68,15 @@ jobs:
       matrix:
         include:
           - operating-system: 'ubuntu-latest'
-            silverstripe-version: '5.0'
-            php-version: '8.1'
+            silverstripe-version: '6.1.0'
+            php-version: '8.3'
           - operating-system: 'ubuntu-latest'
-            silverstripe-version: '4.0'
-            php-version: '8.0'
-          - operating-system: 'ubuntu-latest'
-            silverstripe-version: '4.0'
-            php-version: '7.4'
+            silverstripe-version: '6.0.0'
+            php-version: '8.3'
     name: "Matrix: SS ${{ matrix.silverstripe-version }}, PHP ${{ matrix.php-version }}"
     runs-on: ${{ matrix.operating-system }}
+    services:
+      mysql: *mysql
     steps:
       - uses: actions/checkout@v3
       - uses: php-actions/composer@v6
