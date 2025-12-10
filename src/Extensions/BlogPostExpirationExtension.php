@@ -5,7 +5,7 @@ namespace Logicbrush\BlogUtils\Extensions;
 use SilverStripe\Forms\FieldList;
 use SilverStripe\Blog\Model\BlogPost;
 use SilverStripe\Forms\DatetimeField;
-use SilverStripe\ORM\DataExtension;
+use SilverStripe\Core\DataExtension;
 
 /**
  *
