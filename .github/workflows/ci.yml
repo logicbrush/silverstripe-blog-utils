@@ -24,8 +24,8 @@ jobs:
       - uses: php-actions/composer@v6
         with:
           command: update
-            --with silverstripe/framework:^5.0
-          php_version: 8.1
+            --with silverstripe/framework:^6.0
+          php_version: 8.4
           php_extensions: xdebug intl
       - name: Generate Code Coverage
         run: |
