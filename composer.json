@@ -18,7 +18,7 @@
 		"silverstripe/crontask": "^4.0||4.x-dev"
 	},
 	"require-dev": {
-		"silverstripe/sqlite3": "dev-master",
+        "cambis/silverstripe-rector": "*",
 		"phpunit/phpunit": "^11.0",
 		"rector/rector": "^1.2",
 		"logicbrush/metrics": "^1.0",

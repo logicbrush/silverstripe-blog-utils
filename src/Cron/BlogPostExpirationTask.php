@@ -2,6 +2,7 @@
 
 namespace Logicbrush\BlogUtils\Cron;
 
+use Override;
 use DateTime;
 use SilverStripe\Blog\Model\BlogPost;
 use SilverStripe\CronTask\Interfaces\CronTask;
@@ -15,7 +16,8 @@ class BlogPostExpirationTask implements CronTask {
 	 */
 
 
-	public function getSchedule() {
+	#[Override]
+ public function getSchedule() {
 		return "*/2 * * * *";
 	}
 
@@ -24,7 +26,8 @@ class BlogPostExpirationTask implements CronTask {
 	 *
 	 * @Metrics( crap = 2 )
 	 */
-	public function process() {
+	#[Override]
+ public function process() {
 		$now = DBDatetime::now();
 		$posts = BlogPost::get()->filter( [
 				'ExpirationDate:LessThan' => $now,
